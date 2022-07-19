@@ -40,6 +40,7 @@ class Solution:
         # for t in b:
         #     count_b[ord(t)] += 1
         # return count_a == count_b
+        flag = True
         hashMap = {}
         for t in a:
             if t in hashMap:
@@ -49,8 +50,10 @@ class Solution:
         for t in b:
             if t in hashMap:
                 hashMap[t] -= 1
-        return hashMap.keys() == 0
-
+        for t in hashMap:
+            if hashMap[t] != 0:
+                flag = False
+        return flag
         
 
 def main():
