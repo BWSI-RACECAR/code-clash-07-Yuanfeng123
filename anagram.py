@@ -31,7 +31,7 @@ class Solution:
         # return type: bool
 
         # TODO: Write code below to return a bool with the solution to the prompt
-        return set(a)==set(b) and len(a)==len(b)
+        return sorted(a)==sorted(b)
 
 def main():
     string1 = input().strip()
