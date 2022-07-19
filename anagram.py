@@ -31,7 +31,16 @@ class Solution:
         # return type: bool
 
         # TODO: Write code below to return a bool with the solution to the prompt
-        return sorted(a)==sorted(b)
+        # or return set(a)==set(b) and len(a)==len(b)
+        # return sorted(a)==sorted(b)
+        count_a = [0] * 256
+        count_b = [0] * 256
+        for t in a:
+            count_a[ord(t)] += 1
+        for t in b:
+            count_b[ord(t)] += 1
+        return count_a == count_b
+        
 
 def main():
     string1 = input().strip()
